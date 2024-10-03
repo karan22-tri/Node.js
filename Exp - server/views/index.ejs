@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    body{
+        background-image: url("https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #main{
+        height: 300px;
+        width: 300px;
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #ip1{
+        height: 30px;
+        width: 100%;
+        background-color: transparent;
+        color: white;
+    }
+    #ip2{
+        height: 30px;
+        width: 100%;
+        background-color: transparent;
+        color: white;
+        margin-top: 5%;
+    }
+    button{
+        height: 35px;
+        width: 80%;
+        margin-top: 5%;
+        background-color: transparent;
+    }
+</style>
+<body>
+    <div id="main">
+<h1>Submit Form</h1>
+    <form action="/insert" method="post">
+        <input type="text" placeholder="Enter Your name" name="name" id="ip1">
+        <input type="text" placeholder="Enter your Subject" name="Subject" id="ip2">
+        <button type="submit">submit</button>
+    </form>
+
+</div>
+</body>
+</html>
