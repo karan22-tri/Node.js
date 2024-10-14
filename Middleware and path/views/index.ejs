@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="/public/style.css">
+
+<body>
+    <div id="main">
+    <h1>Form</h1>
+
+    <form action="/insert" method="post">
+        <input type="text" placeholder="Enter Your Name " name="name" style="background-color: transparent; height: 30px;">
+        <input type="text" placeholder="Enter Your Subject" name="subject" style="background-color: transparent; height: 30px;">
+        <input type="number" placeholder="Enter Your Age" name="age" style="background-color: transparent; height: 30px;">
+        <button type="submit" style="background-color: burlywood;color: white; border-radius: 3px; border: none; height: 30px; width: 80px;">ADD</button>
+    </form>
+<br>
+    <table border="2px" width="70%">
+        <thead style="background-color: burlywood;">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Age</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+               <% users.map((e,i)=>{ %>
+                    <tr>
+                        <td><%=e.id%></td>
+                        <td><%=e.name%></td>
+                        <td><%=e.subject%></td>
+                        <td><%=e.age%></td>
+                        <td>
+                            <a href="/edit?Id=<%=e.id%>"><button style="background-color: transparent; height: 30px;margin: 2px;">Edit</button></a>
+                            <a href="/delete?Id=<%=e.id%>"><button style="background-color: transparent; height: 30px;margin: 2px;">Delete</button></a>
+                        </td>
+                    </tr>
+               <% })%>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
