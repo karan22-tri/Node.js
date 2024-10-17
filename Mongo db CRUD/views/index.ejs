@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-image: url("https://cdn.pixabay.com/photo/2024/06/16/15/23/book-8833644_1280.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main {
+        height: 500px;
+        width: 500px;
+        /* border: 1px solid; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <h1>MONGO DB CRUD</h1>
+
+        <form action="/insert" method="post">
+            <input type="text" placeholder="Enter Your Name " name="name"
+                style="background-color: transparent;height: 30px;">
+            <input type="text" placeholder="Enter Your Subject" name="subject"
+                style="background-color: transparent;height: 30px;">
+            <button type="submit" style="background-color: transparent;height: 30px;">ADD</button>
+        </form>
+        <br>
+        <table border="2px" width="80%">
+            <thead>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <% data.map((e,i)=>{ %>
+                    <tr>
+                        <td>
+                            <%=e.name%>
+                        </td>
+                        <td>
+                            <%=e.subject%>
+                        </td>
+                        <td style="padding: 5px;"> <a href="/edit?id=<%=e.id%>"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                            <a href="/delete?id=<%=e.id%>"><button><i class="fa-solid fa-trash" style="background-color: transparent;"></i></button></a>
+                        </td>
+                    </tr>
+                    <% })%>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

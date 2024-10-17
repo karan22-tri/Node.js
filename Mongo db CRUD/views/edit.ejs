@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2024/06/16/15/23/book-8833644_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    height: 500px;
+    width: 500px;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+</style>
+<body>
+    <div id="main">
+    <h1>UPDATE FORM</h1>
+    <form action="/update" method="post">
+        <input type="text" value="<%=singledata.id%>" hidden name="id">
+        <input type="text" value="<%=singledata.name%>" placeholder="Enter Your Name " name="name" style="background-color: transparent;height: 30px;">
+        <input type="text" value="<%=singledata.subject%>" placeholder="Enter Your Subject" name="subject" style="background-color: transparent;height: 30px;" >
+        <button type="submit" style="background-color: transparent;height: 30px;">UPDATE</button>
+    </form>
+</div>
+</body>
+</html>

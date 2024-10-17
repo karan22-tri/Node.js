@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    background-image: url("https://images.unsplash.com/photo-1569511502671-8c1bbf96fc8d?q=80&w=2066&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    height: 500px;
+    width: 900px;
+    margin-left: -100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+</style>
+<body>
+    <div id="main">
+        <h1>BOOK COUNTER</h1>
+    <form action="/update" method="post">
+        
+    <input type="text" hidden name="id" value="<%=singledata.id%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
+    <input type="text" placeholder="Enter Book Name" name="name" value="<%=singledata.name%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
+        <input type="text" placeholder="Enter Other Name" name="subject" value="<%=singledata.subject%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
+        <input type="date" placeholder="Enter Release Date" name="date" value="<%=singledata.date%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
+        <input type="number" placeholder="Enter Book Price" name="price" value="<%=singledata.price%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
+    <button type="submit" style="background-color: transparent; height: 35px;width: 100px;padding-left: 10px;">Update</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-image: url("https://images.unsplash.com/photo-1569511502671-8c1bbf96fc8d?q=80&w=2066&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main {
+        height: 500px;
+        width: 900px;
+        margin-left: -100px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <h1>BOOK COUNTER</h1>
+        <form action="/insert" method="post">
+            <input type="text" placeholder="Enter Book Name" name="name" style="background-color: transparent; height: 30px;padding-left: 10px;">
+            <input type="text" placeholder="Enter Other Name" name="subject" style="background-color: transparent; height: 30px;padding-left: 10px;">
+            <input type="date" placeholder="Enter Release Date" name="date" style="background-color: transparent; height: 30px;padding-left: 10px;">
+            <input type="number" placeholder="Enter Book Price" name="price" style="background-color: transparent; height: 30px;padding-left: 10px;">
+            <button type="submit" style="background-color: transparent; height: 35px;width: 100px;">ADD</button>
+        </form>
+        <table border="2px" width="100%" style="margin-top: 10px;">
+            <thead>
+                <th>Book Name</th>
+                <th>Other Name</th>
+                <th>Release Date</th>
+                <th>Price</th>
+                <th style="padding: 5px;">Action</th>
+            </thead>
+            <tbody>
+                <% data.map((e,i)=>{%>
+                    <tr>
+                        <th>
+                            <%=e.name%>
+                        </th>
+                        <th>
+                            <%=e.subject%>
+                        </th>
+                        <th>
+                            <%=e.date%>
+                        </th>
+                        <th>
+                            <%=e.price%>
+                        </th>
+                        <th>
+                            <a href="/edit?id=<%=e.id%>"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                            <a href="/delete?id=<%=e.id%>"><button><button><i class="fa-solid fa-trash"></i></button></a>
+                        </th>
+                    </tr>
+                    <%})%>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
