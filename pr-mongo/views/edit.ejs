@@ -30,13 +30,15 @@ body {
 <body>
     <div id="main">
         <h1>BOOK COUNTER</h1>
-    <form action="/update" method="post">
+    <form action="/update" method="post" enctype="multipart/form-data">
         
-    <input type="text" hidden name="id" value="<%=singledata.id%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
-    <input type="text" placeholder="Enter Book Name" name="name" value="<%=singledata.name%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
+        <input type="text" hidden name="id" value="<%=singledata.id%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
+        <input type="text" placeholder="Enter Book Name" name="name" value="<%=singledata.name%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
         <input type="text" placeholder="Enter Other Name" name="subject" value="<%=singledata.subject%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
         <input type="date" placeholder="Enter Release Date" name="date" value="<%=singledata.date%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
         <input type="number" placeholder="Enter Book Price" name="price" value="<%=singledata.price%>" style="background-color: transparent; height: 30px;padding-left: 10px;">
+        <input type="file" name="image">
+        <img src="<%=singledata.image%>" width="10%" alt="">
     <button type="submit" style="background-color: transparent; height: 35px;width: 100px;padding-left: 10px;">Update</button>
     </form>
 </div>

@@ -35,9 +35,10 @@
 <body>
     <div id="main">
         <h1>BOOK COUNTER</h1>
-        <form action="/insert" method="post">
+        <form action="/insert" method="post" enctype="multipart/form-data">
             <input type="text" placeholder="Enter Book Name" name="name" style="background-color: transparent; height: 30px;padding-left: 10px;">
             <input type="text" placeholder="Enter Other Name" name="subject" style="background-color: transparent; height: 30px;padding-left: 10px;">
+            <input type="file" name="image" >
             <input type="date" placeholder="Enter Release Date" name="date" style="background-color: transparent; height: 30px;padding-left: 10px;">
             <input type="number" placeholder="Enter Book Price" name="price" style="background-color: transparent; height: 30px;padding-left: 10px;">
             <button type="submit" style="background-color: transparent; height: 35px;width: 100px;">ADD</button>
@@ -46,6 +47,7 @@
             <thead>
                 <th>Book Name</th>
                 <th>Other Name</th>
+                <th>Images</th>
                 <th>Release Date</th>
                 <th>Price</th>
                 <th style="padding: 5px;">Action</th>
@@ -58,6 +60,9 @@
                         </th>
                         <th>
                             <%=e.subject%>
+                        </th>
+                        <th>
+                            <img src="<%=e.image%>" alt="" width="40%" height="40%">
                         </th>
                         <th>
                             <%=e.date%>
