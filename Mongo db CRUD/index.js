@@ -30,11 +30,9 @@ app.get("/delete",async(req,res)=>{
 app.get("/edit",async(req,res)=>{
     let data = await adminSchema.find({})
     let singledata = data.find((item)=> item.id == req.query.id);
-    singledata && res.render("edit",{singledata})
-
-    
-    
+    singledata && res.render("edit",{singledata})  
 })
+
 
 app.post("/update",async(req,res)=>{
     let data = await adminSchema.findByIdAndUpdate(req.body.id,{

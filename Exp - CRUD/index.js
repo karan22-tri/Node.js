@@ -32,7 +32,7 @@ app.post("/insert",(req,res)=>{
 req.body.id = users.length + 1
 console.log(req.body)
 users.push(req.body);
-res.redirect("back")
+res.redirect("back");
 })
 
 app.get("/delete",(req,res)=>{

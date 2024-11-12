@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+</head>
+<body>
+    <center>
+    <h1>Edit-Data</h1>
+    <form action="/update" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="id" value="<%= user.id %>">
+        <input type="text" placeholder="Enter your name" name="name" value="<%= user.name %>">
+        <input type="text" placeholder="Enter your subject" name="subject" value="<%= user.subject %>">
+        <label>Male</label>
+        <input type="radio" name="gender" value="male" <%= user.gender === 'man' ? 'checked' : '' %>>
+        <label>Female</label>
+        <input type="radio" name="gender" value="female" <%= user.gender === 'woman' ? 'checked' : '' %>>
+        <br>
+        <label>Reading</label>
+        <input type="checkbox" name="hobby" value="reading" <%= user.hobby.includes('reading') ? 'checked' : '' %>>
+        <label>Swimming</label>
+        <input type="checkbox" name="hobby" value="swimming" <%= user.hobby.includes('swimming') ? 'checked' : '' %>>
+        <label>Gym</label>
+        <input type="checkbox" name="hobby" value="gym" <%= user.hobby.includes('gym') ? 'checked' : '' %>>
+        <select name="city">
+            <option value="" hidden>Select City</option>
+            <option value="rajkot" <%= user.city === 'rajkot' ? 'selected' : '' %>>Rajkot</option>
+            <option value="bhavnagar" <%= user.city === 'bhavnagar' ? 'selected' : '' %>>Bhavnagar</option>
+            <option value="diu" <%= user.city === 'diu' ? 'selected' : '' %>>Diu</option>
+            <option value="vadodara" <%= user.city === 'vadodara' ? 'selected' : '' %>>Vadodara</option>
+        </select>
+    
+        <input type="file" name="image">
+        
+            <img src="<%= user.image %>" alt="Current Image" width="100">
+      
+        
+        <button type="submit">UPDATE</button>
+    </form>
+    </center>
+</body>
+</html>
