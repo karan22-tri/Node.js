@@ -24,9 +24,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-    
-    </style>
+   
   </head>
   <body>
     <div class="header flex">
@@ -86,11 +84,25 @@
         <div class="slide">
           <img src="../public/img/slide2.jpg" alt="Poster 2" />
         </div>
-       
       </div>
       <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
       <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelector('.slides');
+      const totalSlides = document.querySelectorAll('.slide').length;
+
+      function moveSlide(direction) {
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+
+      setInterval(() => {
+        moveSlide(1);
+      }, 5000);
+    </script>
 
     <h1 class="text-4xl font-semibold ms-[3%]">Recomended Movies</h1>
     <div
@@ -172,17 +184,19 @@
       </div>
       
     </div>
-    <div class="content" >
-      <div class="movieBox">
+    <div class="content flex flex-wrap bg-[rgb(245,245,245)] ">
+      <div class="movieBox w-full flex flex-wrap">
         <%data.map((e)=>{%>
-        <div>
-          <div class="post">
-            <img src="<%=e.image%>" width="20%"alt="" id="image" />
+        <div class="co mx-5 my-5">
+          <div class="post w-full">
+            <img src="<%=e.image%>" class="h-[400px] w-auto object-cover rounded-lg" alt="" id="image" />
           </div>
-          <h1 class="movieName"><%=e.name%></h1>
-          <h1 class="movieTitle"><%=e.title%></h1>
-          <a href="/edit?id=<%=e.id%>"><button>Edit</button></a>
-          <a href="/delete?id=<%=e.id%>"><button>Delete</button></a>
+          <h1 class="movieName text-xl font-semibold mt-4"><%=e.name%></h1>
+          <h1 class="movieTitle text-lg text-gray-700"><%=e.title%></h1>
+          <div class="flex gap-4 mt-4">
+            <a href="/edit?id=<%=e.id%>"><button class="px-4 py-2 bg-blue-500 text-white rounded">Edit</button></a>
+            <a href="/delete?id=<%=e.id%>"><button class="px-4 py-2 bg-red-500 text-white rounded">Delete</button></a>
+          </div>
         </div>
         <% })%>
       </div>
