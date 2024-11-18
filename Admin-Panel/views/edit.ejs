@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+</head>
+<body>
+    <center>
+    <h1>Edit-Data</h1>
+    <form action="/update" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="id" value="<%= user.id %>">
+        <input type="text" placeholder="Enter your name" name="name" value="<%= user.name %>">
+        <input type="text" placeholder="Enter your email" name="email" value="<%= user.email %>">
+        <input type="text" placeholder="Enter your password" name="password" value="<%= user.password %>">
+        <label>man</label>
+        <input type="radio" name="gender" value="man" <%= user.gender === 'man' ? 'checked' : '' %>>
+        <label>woman</label>
+        <input type="radio" name="gender" value="woman" <%= user.gender === 'woman' ? 'checked' : '' %>>
+        <label>others</label>
+        <input type="radio" name="gender" value="others" <%= user.gender === 'others' ? 'checked' : '' %>>
+        <br>
+        <label>Dancing</label>
+        <input type="checkbox" name="hobby" value="Dancing" <%= user.hobby.includes('Dancing') ? 'checked' : '' %>>
+        <label>Reading</label>
+        <input type="checkbox" name="hobby" value="Reading" <%= user.hobby.includes('Reading') ? 'checked' : '' %>>
+        <label>Swiming</label>
+        <input type="checkbox" name="hobby" value="Swiming" <%= user.hobby.includes('Swiming') ? 'checked' : '' %>>
+        <select name="city">
+            <option value="" hidden>Select City</option>
+            <option value="RAJKOT" <%= user.city === 'RAJKOT' ? 'selected' : '' %>>RAJKOT</option>
+            <option value="NATHDWARA" <%= user.city === 'NATHDWARA' ? 'selected' : '' %>>NATHDWARA</option>
+            <option value="UDAIPUR" <%= user.city === 'UDAIPUR' ? 'selected' : '' %>>UDAIPUR</option>
+            <option value="BHAVNAGAR" <%= user.city === 'BHAVNAGAR' ? 'selected' : '' %>>BHAVNAGAR</option>
+        </select>
+    
+        <input type="file" name="image">
+        
+            <img src="<%= user.image %>" alt="Current Image" width="100">
+      
+        
+        <button type="submit">UPDATE</button>
+    </form>
+    </center>
+</body>
+</html>

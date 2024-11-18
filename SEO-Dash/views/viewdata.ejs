@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+   <center>
+    <h1>User Data</h1>
+    <table border="2px" width="80%">
+        <thead>
+            <th>No.</th>
+            <th>User-email</th>
+            <th>User-password</th>
+            <th colspan="2">Action</th>
+        </thead>
+        <tbody>
+               <% KID.map((e,i)=>{%>
+                      <tr>
+                        <th scope="row"><%=i+1%></th>
+                        <td><%=e.email%></td>
+                        <td><%=e.password%></td>
+                        <td><a href="/edit?id=<%=e.id%>"><button><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="/delete?id=<%=e.id%>"><button><button><i class="fa-solid fa-trash"></i></a></td>
+                      </tr>
+                    <%})%>
+        </tbody>
+    </table>
+   </center>
+</body>
+</html>
