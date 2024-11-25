@@ -5,18 +5,7 @@ module.exports.loginPage = async(req,res) =>{
 res.render("login")
 }
 
-module.exports.loginAdmin = async(req,res) =>{
-  let admin = await AdminSchema.findOne({"email":req.body.email})
-  if (!admin) {
-    return console.log("user not found")
-  }
-  if (req.body.password == admin.password) {
-    res.redirect("dashboard")
-  }
-}
-
 module.exports.HomePage = async(req,res) =>{
-  
 res.render("dashboard")
 }
 
@@ -31,8 +20,6 @@ module.exports.viewAdminData = async(req,res) =>{
 }
 
 module.exports.addData = async(req,res)=>{
-  console.log(req.body)
-  console.log(req.file); 
   req.body.image = req.file.path;
   let data = await AdminSchema.create(req.body);
   data && res.redirect("viewadmin");
