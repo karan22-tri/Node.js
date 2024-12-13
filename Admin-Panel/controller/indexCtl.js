@@ -16,7 +16,7 @@ module.exports.addAdminData = async(req,res) =>{
 
 module.exports.viewAdminData = async(req,res) =>{
   let data = await AdminSchema.find({});
-  res.render("viewadmin", { data }   )
+  res.render("viewadmin", { data })
 }
 
 module.exports.addData = async(req,res)=>{

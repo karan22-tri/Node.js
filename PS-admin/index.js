@@ -8,8 +8,16 @@ const session = require("express-session")
 
 
 const app = express()
+
+const flash =require('connect-flash');
+
+const connectflash=require('./middleware/connectFlash')
+const mailer=require('./middleware/mailer')
+
 app.set("view engine","ejs")
 app.use(express.urlencoded())
+app.use(flash())
+
 
 app.use(
     session({
@@ -23,13 +31,23 @@ app.use(
 
 app.use(passport.initialize())
 app.use(passport.session())
-
 app.use(cookie())
-app.use("/",require("./routes/route"))
+app.use(passport.AuthenticatedUser)
+
+app.use(connectflash.setflash)  
+
 app.use("/public",express.static(path.join(__dirname,"public")))
 app.use("/upload", express.static(path.join(__dirname, "upload")));
+
+
+
+app.use("/",require("./routes/route"))
 
 app.listen(port,(err)=>{
     err ? console.log(err) : console.log(`server started at http://localhost:${port}`)
 })
+
+
+
+
 
