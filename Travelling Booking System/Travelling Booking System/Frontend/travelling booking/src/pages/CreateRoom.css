@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-1{
+    background-image: url(https://hoteldel.com/wp-content/uploads/2021/01/hotel-del-coronado-views-suite-K1TOS1-K1TOJ1-1600x900-1.jpg);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+.container{
+    height: 60%;
+    width: 30%;
+    margin-left: 30%;
+    /* border: 1px solid black; */
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+div,
+p {
+  color: #3755c4;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+form {
+  padding: 50px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.segment {
+  padding: 32px 0;
+  text-align: center;
+}
+
+button,
+input {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 320px;
+  padding: 16px;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+label {
+  display: block;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+input {
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+button {
+  color: #61677c;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+button:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+button .icon {
+  margin-right: 8px;
+}
+button.unit {
+  border-radius: 8px;
+  line-height: 0;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  font-size: 19.2px;
+}
+button.unit .icon {
+  margin-right: 0;
+}
+button.red {
+  display: block;
+  width: 100%;
+  color: #ae1100;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.input-group label {
+  margin: 0;
+  flex: 1;
+}
+#file{
+    background-color: transparent;
+}
+table{
+    width: 100%;
+    /* border: 1px solid black; */
+    
+}
+table th{
+    background-color: gray;
+    color: black;
+    font-size: large;
+    font-weight: 900;
+    padding: 10px;
+}
+table tr td{
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+}
+tbody{
+  border: none;
+  background-color: white;
+}

@@ -1,0 +1,121 @@
+.main1{
+  display: flex;
+  margin-left: 120px;
+}
+.main1 button{
+
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f0494c;
+  color: white;
+  border: none;
+  margin-left: 35px;
+  
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(22, 24, 25, 0.638);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  
+}
+
+.logo h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 25px;
+}
+
+.links-container {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.link-item {
+  margin: 0 15px;
+}
+
+.link-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 17px;
+  transition: background 0.3s;
+}
+
+.link-item a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-container button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff5a5f;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #ff3b3f;
+}
+
+.a-header{
+width: 100%;
+height: 700px;
+/* border: 1px solid black; */
+}
+.a-img{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../assets/hero_1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 100%;
+  width: 100%;
+  
+}
+.a-img h1{
+  padding-top: 250px;
+  padding-left: 150px;
+  font-size: 80px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+.a-img button {
+  font-style: italic;
+}

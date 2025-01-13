@@ -1,0 +1,75 @@
+/* Registration.css */
+
+.loginBg1 {
+  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.734), #00000074), url('../assets/63e0ae31497191675669041.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  
+}
+
+
+
+.registration-card {
+  width: 100%;
+    max-width: 600px;
+    height: 500px;
+    padding: 20px;
+  background-color: rgba(255, 255, 255, 0.589);
+  border-radius: 10px;
+  
+  padding: 250px;
+  border-radius: 15px;
+}
+
+.card-title {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.form-label {
+  font-weight: 500;
+  
+}
+
+.btn {
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success {
+  background-color: #d20c65d0;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #26cb4ab1;
+}
+
+.text-muted {
+  font-size: 0.9rem;
+  
+}
+
+.link-primary {
+  text-decoration: none;
+ 
+  
+}
+
+.link-primary:hover {
+  text-decoration: underline;
+}
+.registration-card {
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    padding: 20px;
+}
+
