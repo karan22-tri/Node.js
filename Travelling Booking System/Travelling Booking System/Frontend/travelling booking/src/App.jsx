@@ -12,6 +12,7 @@
   import Cookies from 'js-cookie';
   import { useState } from 'react';
   import Header from './Components/Header';
+import Status from './pages/Status';
   // import { Loader } from 'rsuite';
   // import { Loader, Placeholder } from 'rsuite';
 
@@ -48,6 +49,7 @@
       <Route path="/home" element={<Home/>} role={role}/>
       <Route path="/room" element={<Room/>}  role={role}/>
       <Route path="/flights" element={<Flight/>} role={role} />
+      <Route path="/status" element={<Status/>}/>
 
       </>
     )
