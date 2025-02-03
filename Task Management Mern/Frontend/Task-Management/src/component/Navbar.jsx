@@ -29,8 +29,8 @@ function Navbar() {
       <a href="#" className="nav-link">Brands</a>
       <a href="/addproject" className="nav-link">Create Projects</a>
       <a href="/viewproject" className="nav-link">View Projects</a>
-      <a href="#" className="nav-link">Tasks</a>
-      <a href="#" className="nav-link">Contact</a>
+      <a href="/userproject" className="nav-link">User Projects</a>
+      <a href="/showtask" className="nav-link">Tasks</a>
     </div>
 
     <div className="flex items-center space-x-4">

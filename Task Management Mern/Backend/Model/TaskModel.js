@@ -47,7 +47,7 @@ const taskdb = mongoose.Schema({
         default: [],
     },
     timeEstimate: {
-        type: String, // e.g., "2 hours", "3 days"
+        type: String, 
         trim: true,
     },
     assignedTo: {

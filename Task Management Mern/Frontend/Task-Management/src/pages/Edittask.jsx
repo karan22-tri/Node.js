@@ -17,7 +17,7 @@ function EditTask() {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const response = await axios.get(`http://localhost:8001/task/gettask/${id}`, {
+        const response = await axios.get(`http://localhost:8001/task/edittask/${id}`, {
           withCredentials: true,
         });
         setTask({
@@ -48,7 +48,7 @@ function EditTask() {
         withCredentials: true,
       });
       alert("Task updated successfully");
-      navigate("/viewtasks");
+      navigate("/viewtask");
     } catch (error) {
       console.error(error);
       alert("Error updating task");

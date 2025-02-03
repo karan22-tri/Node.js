@@ -30,6 +30,7 @@ function header() {
       <a href="/showproject" className="nav-link">Projects</a>
       <a href="/taskform" className="nav-link" >Create Tasks</a>
       <a href="/viewtask" className="nav-link">View Tasks</a>
+      <a href="/edittask" className="nav-link">Edit Tasks</a>
     </div>
 
     <div className="flex items-center space-x-4">

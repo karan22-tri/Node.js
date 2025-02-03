@@ -21,19 +21,9 @@ function Showproject() {
     fetchProjects();
   }, []);
 
-  // Delete a project
-  const handleDelete = async (id) => {
-    try {
-      await axios.delete(`http://localhost:8001/project/deletepr/${id}`, {
-        withCredentials: true,
-      });
-      setProjects(projects.filter((project) => project._id !== id));
-      alert("Project deleted successfully");
-    } catch (error) {
-      console.error(error.response.data);
-      alert("Error deleting project");
-    }
-  };
+
+  
+
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
@@ -83,14 +73,9 @@ function Showproject() {
                   </a>
                 </td>
                 <td className="py-3 px-6">
+                
                   <button
-                    onClick={() => handleDelete(project._id)}
-                    className="bg-red-500 text-white py-1 px-3 rounded-md hover:bg-red-600 transition duration-200"
-                  >
-                    Delete
-                  </button>
-                  <button
-              
+                    onClick={()=> handleSubmit(project._id)}
                     className="bg-green-500 text-white py-1 px-3 rounded-md hover:bg-green-600 transition duration-200"
                   >
                   Submit

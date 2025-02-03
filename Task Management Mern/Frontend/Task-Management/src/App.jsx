@@ -12,7 +12,9 @@ import Viewtask from './pages/Viewtask';
 import Showproject from './pages/Showproject';
 import Addproject from './pages/Addproject';
 import Viewproject from './pages/Viewpoject';
-import EditTask from './pages/edittask';
+import Userproject from './pages/Userproject';
+import EditTask from './pages/Edittask';
+import ShowTask from './pages/Showtask';
 
 function App() {
 
@@ -47,7 +49,7 @@ function App() {
     <Route path='/taskform' element={<TaskForm/>} role={role}/>
     <Route path='/viewtask' element={<Viewtask/>} role={role}/>
     <Route path='/showproject' element={<Showproject/>} role={role}/>
-    <Route path='/edittaskt' element={<EditTask/>} role={role}/>
+    <Route path='/edittask/:id' element={<EditTask/>} role={role}/>
 
     </>
   )
@@ -59,6 +61,8 @@ function App() {
     <Route path='/useradmin' element={<Adminhome role={role}/> }></Route>
     <Route path='/addproject' element={<Addproject role={role}/>}></Route>
     <Route path='/viewproject' element={<Viewproject role={role}/>}></Route>
+    <Route path='/userproject' element={<Userproject role={role}/>}></Route>
+    <Route path='/showtask' element={<ShowTask role={role}/>}></Route>
     </>
   )
 }
